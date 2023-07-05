@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ani mals</title>
+  <style>
+  body {
+  background-color: #1F1F1F;
+  font-family: Arial, sans-serif;
+  color: #FFFFFF;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  }
+
+  h1 {
+  color: #FF4081;
+  text-align: center;
+  margin-bottom: 10px;
+  }
+
+  .riddle {
+  background-color: #212121;
+  border-radius: 5px;
+  font-size: 28px;
+  }
+
+  .riddle p {
+  font-size: 18px;
+  line-height: 1.5;
+  }
+
+  .answer {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF4081;
+  text-align: right;
+  padding-right: 40px;
+  }
+  .back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .back-button-text {
+    margin-left: 5px;
+  }
+
+  .content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="back-button">
+    <svg width="96" height="96" xmlns="http://www.w3.org/2000/svg" overflow="hidden" fill="#bad455">
+      <path d="M31.75 48l21 28h12.5l-21-28 21-28h-12.5l-21 28z" />
+      <path d="M68.25 48l21-28h-12.5l-21 28 21 28h12.5l-21-28zM7.75 48l21 28h12.5l-21-28 21-28h-12.5l-21 28z" />
+  </svg>
+  </a>
+
+
+<div class="content">
+<h1>AniMal</h1>
+
+<div class="riddle"> <details> <summary>Dog</summary> <p class="answer">Perro</p></details></div>
+<div class="riddle"> <details> <summary>Cat</summary> <p class="answer">Gato</p></details></div>
+<div class="riddle"> <details> <summary>Elephant</summary> <p class="answer">Elefante</p></details></div>
+<div class="riddle"> <details> <summary>Lion</summary> <p class="answer">León</p></details></div>
+<div class="riddle"> <details> <summary>Tiger</summary> <p class="answer">Tigre</p></details></div>
+<div class="riddle"> <details> <summary>Horse</summary> <p class="answer">Caballo</p></details></div>
+<div class="riddle"> <details> <summary>Bird</summary> <p class="answer">Pájaro</p></details></div>
+</div>
+
+</body>
+</html>

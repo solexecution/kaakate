@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>I am Bored</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      padding: 5vw;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      height: 100%;
+    }
+
+    .grid-item {
+      text-align: center;
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2vw;
+      font-family: fantasy;
+      border-radius: 20px;
+      cursor: pointer;
+      border-color: transparent;
+    }
+
+    .glow {
+      animation: glowing 2s infinite;
+    }
+
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 5px #d35b5b;
+      }
+
+      50% {
+        box-shadow: 0 0 40px #bad455;
+      }
+
+      100% {
+        box-shadow: 0 0 5px #000000;
+      }
+    }
+  </style> <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const gridItems = document.getElementsByClassName('grid-item');
+      const randomIndex = Math.floor(Math.random() * gridItems.length);
+      gridItems[randomIndex].classList.add('glow');
+
+      const colors = generateRandomPastelColors(gridItems.length);
+
+      for (let i = 0; i < gridItems.length; i++) {
+        gridItems[i].style.backgroundColor = colors[i];
+      }
+    });
+
+    function generateRandomPastelColors(numColors) {
+      const colors = [];
+      for (let i = 0; i < numColors; i++) {
+        const color = getRandomPastelColor();
+        colors.push(color);
+      }
+      return colors;
+    }
+
+    function getRandomPastelColor() {
+      const hue = Math.floor(Math.random() * 360);
+      const pastelColor = `hsl(${hue}, 40%, 80%)`;
+      return pastelColor;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="grid-container">
+    <button class="grid-item"><a href="Math.html">Math</a></button>
+    <button class="grid-item"><a href="Physics.html">Physics</a></button>
+    <button class="grid-item"><a href="Chemistry.html">Chemistry</a></button>
+    <button class="grid-item"><a href="Biology.html">Biology</a></button>
+    <button class="grid-item"><a href="Geography.html">Geography</a></button>
+    <button class="grid-item"><a href="Art.html">Art</a></button>
+    <button class="grid-item"><a href="Slovak.html">Slovak</a></button>
+    <button class="grid-item"><a href="English.html">English</a></button>
+    <button class="grid-item"><a href="Spanish.html">Spanish</a></button>
+  </div>
+
+
+
+</body>
+
+</html>
